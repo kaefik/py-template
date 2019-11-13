@@ -34,6 +34,7 @@ import logging.handlers
 import os
 import sys
 
+# логгирование 
 logger = logging.getLogger(os.path.splitext(os.path.basename(sys.argv[0]))[0])
 
 
