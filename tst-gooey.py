@@ -16,10 +16,13 @@
 
 """
 
+# запуск команды:
+# python3 tst-gooey.py --ignore-gooey step0
+
 from gooey import Gooey, GooeyParser
 
 
-@Gooey(program_name='Помощник АУПа', default_size=(900,700), language='russian')
+@Gooey(dump_build_config=True)
 def main():
     
     parser = GooeyParser()
@@ -38,7 +41,7 @@ def main():
 
     print(args)
 
-    commands = args.command
+    #commands = args.command
 
 
 #print(main) #  <function Gooey.<locals>.build.<locals>.inner2 at 0x7f2276425cb0>
