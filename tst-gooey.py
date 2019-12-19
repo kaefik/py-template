@@ -25,21 +25,17 @@ from gooey import Gooey, GooeyParser
 @Gooey(dump_build_config=True)
 def main():
     
-    parser = GooeyParser()
+    my_parser = GooeyParser()
 
-    subs = parser.add_subparsers(help='commands', dest='command')
-    # ------ Шаг 0 --------------
-    step0_parser = subs.add_parser('step0', help='что-то делает')
-    step0_parser.add_argument('-flag1',  default=True, metavar="Флаг1",
-    action='store_true', help="включите Флаг1")
-    """
-    step0_parser.add_argument('-flag2',  default=False, metavar="Флаг2",
-    action='store_true', help="включите Флаг1")
-    """
-        
-    args = parser.parse_args()
+    my_parser.add_argument('-flag1',  default=True, metavar="Флаг1", action='store_true',
+    help="включите Флаг1")
+    
+
+    args = my_parser.parse_args()
 
     print(args)
+    print(type(args))
+    print(vars(args))
 
     #commands = args.command
 
