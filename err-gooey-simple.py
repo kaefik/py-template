@@ -4,10 +4,11 @@
         Ubuntu 19.10
         Gooey==1.0.3   (https://github.com/chriskiehl/Gooey)
 
-    скрипт который показывает неверное обработка визуальных элементов типа флажок:
+    скрипт который показывает неверное обработка визуальных элементов 
+    типа флажок:
 
     если по умолчанию установлен True, то когда убираем отметку,
-     все равно после запуска параметр установлен в True, хотя должен быть False.
+    все равно после запуска параметр установлен в True, хотя должен быть False.
 
     step0_parser.add_argument('-flag1',  default=True, metavar="Флаг1",
         action='store_true', help="включите Флаг1")
@@ -24,12 +25,11 @@ from gooey import Gooey, GooeyParser
 
 @Gooey(dump_build_config=True)
 def main():
-    
+
     my_parser = GooeyParser()
 
-    my_parser.add_argument('-flag1',  default=True, metavar="Флаг1", action='store_true',
-    help="включите Флаг1")
-    
+    my_parser.add_argument('-flag1',  default=True, metavar="Флаг1",
+                           action='store_true', help="включите Флаг1")
 
     args = my_parser.parse_args()
 
@@ -39,11 +39,4 @@ def main():
 
     #commands = args.command
 
-
-#print(main) #  <function Gooey.<locals>.build.<locals>.inner2 at 0x7f2276425cb0>
-
 main()
-
-
-
-    
